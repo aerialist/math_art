@@ -7,10 +7,19 @@
         </main>
     </body>
     <script>
-        let a = 5;
-        let b = 2;
-        let c = a/b;
-        let d = a%b;
-        console.log(a, "/", b, "=", c, "...", d);
-    </script>
+        let a = 14803;
+        let b = 12707;
+        let c;
+        let d = b;
+        let itr = 0;
+        while(d>0){
+            itr++;
+            c = parseInt(a/b);
+            d = a%b;
+            console.log(itr, ':', a, '/', b, '=', c, '...', d);
+            a = b;
+            b = d;
+        }
+        console.log("GCD is", a);
+   </script>
 </html>

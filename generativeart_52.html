@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    </head>
+    <body>
+        <main>
+        </main>
+    </body>
+    <script>
+        let numA = 9;
+        let numB = 38;
+        let scalar = 50;
+        numA *= scalar;
+        numB *= scalar;
+
+        let wd = numB;
+        let xPos = 0;
+        let yPos = 0;
+        let itr = 0;
+        let col;
+
+        function setup(){
+            createCanvas(numA, numB);
+            colorMode(HSB, 1);
+            while( wd > 0 ){
+                itr++;
+                if (itr % 2 == 1){
+                    while (xPos + wd <= numA){
+                        col = color(random(1), 1, 1);
+                        fill(col);
+                        rect(xPos, yPos, wd, wd);
+                        xPos += wd;
+                    }
+                    wd = numA - xPos;
+                } else {
+                    while (yPos +wd <= numB){
+                        col = color(random(1), 1, 1);
+                        fill(col);
+                        rect(xPos, yPos, wd, wd);
+                        yPos += wd;
+                    }
+                    wd = numB - yPos;
+                }
+            }
+        }
+        
+   </script>
+</html>

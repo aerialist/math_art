@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    </head>
+    <body>
+        <main>
+        </main>
+    </body>
+    <script>
+        function setup(){
+            createCanvas(860,720);
+            noLoop();
+        }
+
+        function draw(){
+            background('#E7ECF2');
+            noFill();
+            beginShape();
+            for (let x=0; x<=width; x++){
+                let y = map(noise(x*0.0015), 0,1,0,height);
+                vertex(x,y);
+            }
+            endShape();
+        }
+        
+   </script>
+</html>

@@ -2,6 +2,7 @@
 # Run web server
 
 python3 -m http.server
+https://code.shunpy.net/proxy/8000/
 
 # Pythonではじめる数学の冒険
 
